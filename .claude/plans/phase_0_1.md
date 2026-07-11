@@ -319,3 +319,5 @@ configuration).
 
 After PR 2 merges and §8 passes, item 0.1 is done; proceed to item 0.2
 (tooling skeleton), which delivers the first real code-carrying PR.
+
+> Smoke test executed 2026-07-11 — protection verified.
