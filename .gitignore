@@ -1,0 +1,37 @@
+# Secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage*
+*.egg-info/
+dist/
+build/
+
+# Project outputs
+reports/
+
+# DVC cache (Phase 5)
+.dvc/cache/
+.dvc/tmp/
+
+# Local-only documents
+*.pdf
+
+# Claude Code machine-local settings
+.claude/settings.local.json
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Folders
+Explanation/
