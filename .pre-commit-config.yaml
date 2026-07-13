@@ -1,0 +1,27 @@
+repos:
+    - repo: https://github.com/astral-sh/ruff-pre-commit
+      rev: v0.6.0
+      hooks:
+        - id: ruff        # lint
+        - id: ruff-format # format
+    - repo: https://github.com/pre-commit/mirrors-mypy
+      rev: v1.11.0
+      hooks:
+        - id: mypy
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v4.6.0
+      hooks:
+        - id: trailing-whitespace
+        - id: end-of-file-fixer
+        - id: check-yaml
+        - id: check-added-large-files
+        - id: mixed-line-ending
+          args: ["--fix=lf"]  # matches .gitattributes, keeps Windows checkouts LF
+    - repo: local
+      hooks:
+        - id: pytest-unit
+          name: pytest (unit tests only)
+          entry: uv run pytest -m unit
+          language: system
+          pass_filenames: false
+          stages: [pre-push]  # fast hooks per commit; unit suite per push
