@@ -65,6 +65,7 @@ markers = [
 [tool.coverage.run]
 source = ["config", "data_generator", "ml_pipeline", "serving"]
 branch = true
+relative_files = true
 
 [tool.coverage.report]
 fail_under = 80
