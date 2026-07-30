@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     mlflow_tracking_uri: str = "http://localhost:5000"
 
     @property
-    def database_url(self)->str:
+    def database_url(self) -> str:
         """SQLAlchemy connection URL assembled from the Postgres fields."""
         return (
             f"postgresql+psycopg2://{self.postgres_user}:{self.postgres_password}"
