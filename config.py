@@ -35,7 +35,7 @@ class Settings(BaseSettings):
         )
 
 
-class _DocsCheckProbe:
+class _DocsCheckProbe:  # pragma: no cover
     def _a(self) -> None:
         pass
 
