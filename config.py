@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
+import sys
 
 
 class Settings(BaseSettings):
