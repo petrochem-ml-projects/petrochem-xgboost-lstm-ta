@@ -33,23 +33,3 @@ class Settings(BaseSettings):
             f"postgresql+psycopg2://{self.postgres_user}:{self.postgres_password}"
             f"@{self.postgres_host}:{self.postgres_port}/{self.postgres_db}"
         )
-
-
-class _DocsCheckProbe:  # pragma: no cover
-    def _a(self) -> None:
-        pass
-
-    def _b(self) -> None:
-        pass
-
-    def _c(self) -> None:
-        pass
-
-    def _d(self) -> None:
-        pass
-
-    def _e(self) -> None:
-        pass
-
-    def _f(self) -> None:
-        pass
