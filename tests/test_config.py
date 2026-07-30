@@ -33,7 +33,7 @@ def clean_env(monkeypatch: pytest.MonkeyPatch) -> None:
 def test_defaults() -> None:
     """With no env vars and no .env file, the local-dev defaults apply"""
     settings = make_settings()
-    assert settings.postgres_host == "wrong-value"
+    assert settings.postgres_host == "localhost"
     assert settings.postgres_port == 5432
     assert settings.postgres_db == "petrochem"
     assert settings.postgres_user == "petrochem"
