@@ -49,6 +49,10 @@ python_version = "3.11"
 disallow_untyped_defs = true
 warn_return_any = true
 
+[[tool.mypy.overrides]]
+module = "testcontainers.*"
+ignore_missing_imports = true
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 markers = [
@@ -57,3 +61,18 @@ markers = [
     "pipeline: end-to-end dvc/airflow smoke tests",
     "e2e: full-stack tests over live HTTP",
 ]
+
+[tool.coverage.run]
+source = ["config", "data_generator", "ml_pipeline", "serving"]
+branch = true
+relative_files = true
+
+[tool.coverage.report]
+fail_under = 80
+show_missing = true
+
+[tool.interrogate]
+fail-under = 80
+verbose = 2
+exclude = ["tests", ".venv"]
+ignore-init-module = false
