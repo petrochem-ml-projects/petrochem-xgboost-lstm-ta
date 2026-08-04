@@ -39,6 +39,9 @@ jobs:
   unit-tests:
     needs: typecheck
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
     steps:
       - uses: actions/checkout@v7.0.1
       - uses: astral-sh/setup-uv@v9.0.0
