@@ -30,6 +30,7 @@ dev = [
     "pre-commit",
     "testcontainers",
     "interrogate",
+    "pandas-stubs",
 ]
 
 [tool.ruff]
