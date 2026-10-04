@@ -12,6 +12,8 @@ from data_generator.generators.latent import (
     OUProcessLatentGenerator,
 )
 
+pytestmark = pytest.mark.unit
+
 
 def _spec(n_samples: int = 100, n_regimes: int = 3, n_latent_states: int = 2) -> ProcessSpec:
     return ProcessSpec(
