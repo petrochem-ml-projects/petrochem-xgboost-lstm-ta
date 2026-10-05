@@ -48,6 +48,9 @@ SINGLE_METHOD_ABCS = (
 )
 
 
+pytestmark = pytest.mark.unit
+
+
 def _minimal_spec() -> ProcessSpec:
     return ProcessSpec(
         process_name="dummy",

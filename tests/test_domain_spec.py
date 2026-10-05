@@ -15,6 +15,8 @@ from data_generator.domain.spec import (
     TargetSpec,
 )
 
+pytestmark = pytest.mark.unit
+
 
 def _minimal_process_spec(**overrides: object) -> ProcessSpec:
     defaults: dict[str, object] = {
